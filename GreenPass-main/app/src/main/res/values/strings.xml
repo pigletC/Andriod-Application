@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="bt_client">Send File</string>
+    <string name="bt_server">Receive File</string>
+    <string name="bt">Secure File Sharing</string>
+    <string name="reScan">Refresh</string>
+    <string name="read">Read</string>
+    <string name="setNotify">Set Notify</string>
+    <string name="max_byte">Maximum 20 bits</string>
+    <string name="write">Write</string>
+    <string name="button">Button</string>
+    <string name="bt_base">bt_base</string>
+    <string name="bt_Base">bt_Base</string>
+</resources>

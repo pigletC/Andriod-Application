@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.login">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:name=".APP"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@drawable/icon1"
+        android:label="GreenPass"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Login"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".bt.BtClientActivity"
+            android:label="@string/bt_client"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".bt.BtServerActivity"
+            android:label="@string/bt_server"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".FileSharingActivity"
+            android:label="Secure File Sharing"
+            android:parentActivityName=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.PasswordAutofillActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".MyAutofillService"
+            android:exported="true"
+            android:label="Autofill Service"
+            android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.autofill.AutofillService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.autofill"
+                android:resource="@xml/service_configuration" />
+        </service>
+
+        <activity
+            android:name=".activities.GeneratePasswordActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.CheckMasterKeyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UpdatePassword"
+            android:exported="false"
+            android:parentActivityName=".activities.PasswordManagementActivity" />
+        <activity
+            android:name=".activities.AddPasswordActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.PasswordManagementActivity" />
+        <activity
+            android:name=".activities.RetrieveActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.LoginActivity" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.LoginActivity" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PasswordManagementActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.MainActivity" />
+    </application>
+
+</manifest>

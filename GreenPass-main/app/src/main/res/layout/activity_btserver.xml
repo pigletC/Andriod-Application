@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/bg2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listening..."
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sendPublicKey2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendMsg"
+        android:enabled="false"
+    android:text="Send Encoded Public Key" />
+
+    <Button
+        android:id="@+id/generateSecret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="serverGenerateSecret"
+        android:enabled="false"
+        android:text="Generate Shared Secret"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Ciphertext" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="decryptFile"
+        android:enabled="false"
+        android:text="Decrypt Ciphertext" />
+
+    <include layout="@layout/layout_send" />
+
+</LinearLayout>

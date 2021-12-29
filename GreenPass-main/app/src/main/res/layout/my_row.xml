@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/my_row_scene"
+    android:id="@+id/my_row">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/passwordId_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.418" />
+
+        <TextView
+            android:id="@+id/account_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:text="account"
+            app:layout_constraintStart_toEndOf="@+id/domain_row"
+            app:layout_constraintTop_toTopOf="@+id/domain_row" />
+
+        <TextView
+            android:id="@+id/password_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="password"
+            app:layout_constraintBottom_toBottomOf="@+id/passwordId_row"
+            app:layout_constraintStart_toEndOf="@+id/passwordId_row" />
+
+        <TextView
+            android:id="@+id/domain_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="4dp"
+            android:text="domain"
+            app:layout_constraintStart_toEndOf="@+id/passwordId_row"
+            app:layout_constraintTop_toTopOf="@+id/passwordId_row" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

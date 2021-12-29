@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:padding="2dp">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:onClick="reScan"
+
+        android:text="@string/reScan" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bt"
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:background="@drawable/stroke"
+        android:padding="2dp" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/sendPublicKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendMsg"
+        android:enabled="false"
+        android:text="Send Encoded Public Key" />
+
+    <Button
+        android:id="@+id/generateSecret"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clientGenerateSecret"
+        android:enabled="false"
+        android:text="Generate Shared Secret"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Select File to Encrypt" />
+
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendFile"
+        android:enabled="false"
+        android:text="Send Ciphertext" />
+
+    <include layout="@layout/layout_send" />
+
+</LinearLayout>
